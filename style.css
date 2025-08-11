@@ -90,6 +90,7 @@ body {
 .button-container {
     width: 300px;
     justify-content: center;
+    margin-top: 10px;
 }
 
 /* Estilos de entrada de texto */
@@ -134,12 +135,28 @@ ul {
     margin: 20px 0;
 }
 
+.name-list {
+    list-style: none;          
+    padding: 10px;
+    margin-top: 10px;
+    border: 2px solid #ccc;     
+    border-radius: 8px;         
+    background-color: #f9f9f9;  
+    max-width: 300px;
+    font-size: 18px;
+}
+
 .result-list {
-    margin-top: 15px;
+    margin-top: 10px;
     color: #05DF05;
     font-size: 22px;
     font-weight: bold;
     text-align: center;
+    padding: 10px;
+    background-color: #e6ffe6;  
+    border: 2px solid #00cc00;
+    border-radius: 8px;
+    max-width: 350px;    
 }
 
 /* Botón de sortear título */
@@ -151,6 +168,7 @@ ul {
     color: var(--color-white);
     background-color: var(--color-button);
     font-size: 16px;
+    min-height: 38px;
 }
 
 .button-draw img {
@@ -159,4 +177,12 @@ ul {
 
 .button-draw:hover {
     background-color: var(--color-button-hover);
+}
+
+.name-list:empty {
+  display: none;
+}
+
+.result-list:empty {
+  display: none;
 }

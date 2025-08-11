@@ -1,5 +1,6 @@
 //Lista de los nombres introducidos
 const listaNombres = [];
+
 //Función para almacenar los nombres introducidos al hacer click
 function agregarAmigo() {
     let inputNombre = document.getElementById("amigo").value;
@@ -13,10 +14,12 @@ function agregarAmigo() {
     limpiarCaja();
     mostrarNombres();    
 }
+
 //Función para limpiar la caja al introducir un nombre
 function limpiarCaja() {
     document.getElementById("amigo").value = "";
 }
+
 //Función para mostrar los nombres almacenados en pantalla
 function mostrarNombres () {
     let mostrarLista = document.getElementById("listaAmigos");
@@ -27,6 +30,7 @@ function mostrarNombres () {
         nombreLista.textContent = listaNombres[i];
         mostrarLista.appendChild(nombreLista);
     }
+
 //Función para sortar los nombres con pseudoaleatoriedad
 }
 function sortearAmigo () {
@@ -34,6 +38,10 @@ function sortearAmigo () {
         alert("No hay nombres para sortear");
         return;
     }
+    if (listaNombres.length === 1) {
+    alert("Añade más nombres para poder sortear.");
+    return;
+  }
     let indiceAleatorio = Math.floor(Math.random()*listaNombres.length);
     let nombreSorteado = listaNombres[indiceAleatorio];
     let resultado = document.getElementById("resultado");
