@@ -186,3 +186,27 @@ ul {
 .result-list:empty {
   display: none;
 }
+
+.button-reset {
+  background-color: #fe652b;
+  border: 2px solid;
+  border-radius: 25px;
+  border-color: #000;
+  padding: 10px 40px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-top: 10px;
+  color: var(--color-white);
+  align-items: center;
+  display: flex;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.button-reset:hover {
+  background-color: #e55720;
+}
+.button-reset img {
+    margin-right: 15px;
+}
