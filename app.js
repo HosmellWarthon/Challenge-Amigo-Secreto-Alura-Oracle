@@ -5,6 +5,11 @@ let listaNombres = [];
 function agregarAmigo() {
     let inputNombre = document.getElementById("amigo").value;
     let nombreAmigo = inputNombre.trim();
+    let soloLetras = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/;
+    if (!soloLetras.test(nombreAmigo)) {
+        alert("El nombre solo puede contener letras y espacios.");
+        return;
+    }    
     //Si no se ingresa un valor, mostrar alert
     if (nombreAmigo === "") {
         alert("Ingresa un nombre válido");
